@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bem-vindo | Login</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Optional: Add a subtle animation to the container */
+        .login-container {
+            animation: fadeIn 0.8s ease-out;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body>
+
+<div class="login-container">
+    <h2>Entrar</h2>
+    
+    <form action="dashboard.php" method="POST">
+        <div class="input-group">
+            <input type="text" name="username" placeholder="Usuário" required>
+        </div>
+        
+        <div class="input-group">
+            <input type="password" name="password" placeholder="Senha" required>
+        </div>
+        
+        <button type="submit" class="btn-login">Login</button>
+    </form>
+    
+    <div class="footer-links">
+        <a href="#">Esqueceu a senha?</a>
+        <a href="#">Criar conta</a>
+    </div>
+</div>
+
+<script>
+    // Optional: Add some interactivity (e.g. check caps lock)
+    const passwordInput = document.querySelector('input[type="password"]');
+    passwordInput.addEventListener('keyup', function(event) {
+        if (event.getModifierState("CapsLock")) {
+            // Could show a warning here
+            console.log("Caps Lock is on");
+        }
+    });
+</script>
+
+</body>
+</html>
